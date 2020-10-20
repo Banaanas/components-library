@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "@emotion/styled";
 import { NavLink, useLocation } from "react-router-dom";
 import { usePopper } from "react-popper";
@@ -39,13 +39,11 @@ const DropdownMenu = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
-  font-weight: bolder;
-  text-align: center;
   background-color: ${({ theme }) => theme.colors.secondary.common};
   border-radius: 5px;
   visibility: ${(props) => (props.visible ? "visible" : "hidden")};
   opacity: ${(props) => (props.visible ? 1 : 0)};
-  transition: background-color, opacity 1s linear;
+  transition: background-color, opacity 250ms linear;
 `;
 
 const DropdownMenuItem = styled(NavLink)`
@@ -75,22 +73,26 @@ const NavBar = () => {
 
   // USESTATE - STATE
   const [visible, setVisibility] = useState(false);
-  const [referenceRef, setReferenceRef] = useState(null);
-  const [popperRef, setPopperRef] = useState(null);
+  const referenceRef = useRef(null);
+  const popperRef = useRef(null);
 
   // Popper Configuration
-  const { styles, attributes } = usePopper(referenceRef, popperRef, {
-    placement: "bottom-start",
-    modifiers: [
-      {
-        name: "offset",
-        enabled: true,
-        options: {
-          offset: [0, 0],
+  const { styles, attributes } = usePopper(
+    referenceRef.current,
+    popperRef.current,
+    {
+      placement: "bottom-start",
+      modifiers: [
+        {
+          name: "offset",
+          enabled: true,
+          options: {
+            offset: [0, 5],
+          },
         },
-      },
-    ],
-  });
+      ],
+    },
+  );
 
   // OPEN DROP DOWN MENU - FUNCTION
   const handleOpenMenu = () => {
@@ -114,7 +116,7 @@ const NavBar = () => {
           isActive={() =>
             ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
           }
-          ref={setReferenceRef}
+          ref={referenceRef}
           onClick={handleCloseMenu}
           onMouseEnter={handleOpenMenu}
           onMouseLeave={handleCloseMenu}
@@ -132,7 +134,7 @@ const NavBar = () => {
         onMouseEnter={handleOpenMenu}
         onMouseLeave={handleCloseMenu}
         activeClassName="selected" // Active Class for NavLink / Based on useLocation
-        ref={setPopperRef}
+        ref={popperRef}
         style={styles.popper}
         {...attributes.popper}
         visible={visible}
