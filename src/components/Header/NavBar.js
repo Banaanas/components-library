@@ -4,7 +4,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { usePopper } from "react-popper";
 
 const StyledNav = styled.nav`
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 50%;
@@ -39,10 +39,9 @@ const DropdownMenu = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
-  color: white;
   font-weight: bolder;
   text-align: center;
-  background-color: ${(props) => (props.visible ? "red" : "blue")};
+  background-color: ${({ theme }) => theme.colors.secondary.common};
   border-radius: 5px;
   visibility: ${(props) => (props.visible ? "visible" : "hidden")};
   opacity: ${(props) => (props.visible ? 1 : 0)};
@@ -54,19 +53,18 @@ const DropdownMenuItem = styled(NavLink)`
   align-items: center;
   justify-content: flex-start;
   padding: 0.5rem;
-  color: white;
+  color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: bolder;
   text-decoration: none;
-  background-color: blueviolet;
+  text-transform: uppercase;
   cursor: pointer;
+  opacity: 0.5;
 
   &.selected {
-    color: yellow;
     opacity: 1;
   }
 
   &:hover {
-    color: yellow;
     opacity: 1;
   }
 `;
@@ -114,7 +112,7 @@ const NavBar = () => {
           to="/about"
           activeClassName="selected"
           isActive={() =>
-            ["/about", "/cyrilo", "/resume", "/passions"].includes(pathname)
+            ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
           }
           ref={setReferenceRef}
           onClick={handleCloseMenu}
@@ -130,42 +128,39 @@ const NavBar = () => {
           CONTACT
         </StyledNavLink>
       </StyledNav>
+      <DropdownMenu
+        onMouseEnter={handleOpenMenu}
+        onMouseLeave={handleCloseMenu}
+        activeClassName="selected" // Active Class for NavLink / Based on useLocation
+        ref={setPopperRef}
+        style={styles.popper}
+        {...attributes.popper}
+        visible={visible}
+      >
+        <DropdownMenuItem
+          to="/cyrilo"
+          activeClassName="selected"
+          onClick={handleCloseMenu}
+        >
+          Cyrilo
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          to="/vision"
+          activeClassName="selected"
+          onClick={handleCloseMenu}
+        >
+          Vision
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          to="/resume"
+          activeClassName="selected"
+          onClick={handleCloseMenu}
+        >
+          Resume
+        </DropdownMenuItem>
+      </DropdownMenu>
     </React.Fragment>
   );
 };
 
 export default NavBar;
-
-/*
-
-<DropdownMenu
-    onMouseEnter={handleOpenMenu}
-    onMouseLeave={handleCloseMenu}
-    activeClassName="selected" // Active Class for NavLink / Based on useLocation
-    ref={setPopperRef}
-    style={styles.popper}
-    {...attributes.popper}
-    visible={visible}
->
-    <DropdownMenuItem
-        to="/customsoftware"
-        activeClassName="selected"
-        onClick={handleCloseMenu}
-    >
-        Custom Software Development
-    </DropdownMenuItem>
-    <DropdownMenuItem
-        to="/mobileapps"
-        activeClassName="selected"
-        onClick={handleCloseMenu}
-    >
-        Mobile Apps
-    </DropdownMenuItem>
-    <DropdownMenuItem
-        to="/website"
-        activeClassName="selected"
-        onClick={handleCloseMenu}
-    >
-        Website
-    </DropdownMenuItem>
-</DropdownMenu> */
