@@ -87,7 +87,7 @@ const NavBar = () => {
           name: "offset",
           enabled: true,
           options: {
-            offset: [0, 5],
+            offset: [0, 0],
           },
         },
       ],

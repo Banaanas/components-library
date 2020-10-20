@@ -14,8 +14,8 @@ const StyledMenu = styled.nav`
   padding: 0 2rem;
   text-align: left;
   background-color: ${({ theme }) => theme.colors.secondary.common};
-  transform: ${({ openMenu }) =>
-    openMenu ? "translateX(0)" : "translateX(-100%)"};
+  transform: ${({ isMenuOpen }) =>
+  isMenuOpen ? "translateX(0)" : "translateX(-100%)"};
   transition: transform 0.3s ease-in-out;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
@@ -61,19 +61,19 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
-const SideMenu = ({ setOpenMenu, openMenu, menuID }) => {
-  const isHidden = openMenu ? true : false;
+const SideMenu = ({ isMenuOpen, setMenuOpen,  menuID }) => {
+  const isHidden = isMenuOpen ? true : false;
   const tabIndex = isHidden ? 0 : -1;
 
   return (
-    <StyledMenu openMenu={openMenu} id={menuID} aria-hidden={!isHidden}>
+    <StyledMenu isMenuOpen={isMenuOpen} id={menuID} aria-hidden={!isHidden}>
       <StyledNav>
         <StyledNavLink
           exact
           to="/"
           activeClassName="selected"
           tabIndex={tabIndex}
-          onClick={() => setOpenMenu(!openMenu)}
+          onClick={() => setMenuOpen(!isMenuOpen)}
         >
           <span aria-hidden="true">&#128060;</span>
           Home
@@ -83,7 +83,7 @@ const SideMenu = ({ setOpenMenu, openMenu, menuID }) => {
           to="/about"
           activeClassName="selected"
           tabIndex={tabIndex}
-          onClick={() => setOpenMenu(!openMenu)}
+          onClick={() => setMenuOpen(!isMenuOpen)}
         >
           <span aria-hidden="true">&#128040;</span>
           About
@@ -92,7 +92,7 @@ const SideMenu = ({ setOpenMenu, openMenu, menuID }) => {
           to="/work"
           activeClassName="selected"
           tabIndex={tabIndex}
-          onClick={() => setOpenMenu(!openMenu)}
+          onClick={() => setMenuOpen(!isMenuOpen)}
         >
           <span aria-hidden="true">&#128047;</span>
           Work
@@ -101,7 +101,7 @@ const SideMenu = ({ setOpenMenu, openMenu, menuID }) => {
           to="/contact"
           activeClassName="selected"
           tabIndex={tabIndex}
-          onClick={() => setOpenMenu(!openMenu)}
+          onClick={() => setMenuOpen(!isMenuOpen)}
         >
           <span aria-hidden="true">&#128048;</span>
           Contact

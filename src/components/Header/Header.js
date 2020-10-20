@@ -7,7 +7,7 @@ import Shiva from "../../assets/Shiva.svg";
 
 import Burger from "./Burger";
 import SideMenu from "../SideMenu/SideMenu";
-import useClickOutside from "../../custom-hooks/useclickOutside";
+import useOnClickOutside from "../../custom-hooks/useOnClickOutside";
 import NavBar from "./NavBar";
 
 const StyledHeader = styled.header`
@@ -46,12 +46,12 @@ const StyledRefDiv = styled.div`
 `;
 
 const Header = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
   const DOMRef = useRef(null);
   const menuId = "main-menu";
 
-  // Close Side SideMenu when click outside - custom Hook
-  useClickOutside(DOMRef, () => setOpenMenu(false));
+  // Close Side SideMenu when click outside the Ref- custom Hook
+  useOnClickOutside(DOMRef, () => setMenuOpen(false));
 
   return (
     <StyledHeader>
@@ -62,15 +62,15 @@ const Header = () => {
       </NavLink>
       <NavBar />
       <StyledRefDiv ref={DOMRef}>
-        <FocusLock disabled={!openMenu}>
+        <FocusLock disabled={!isMenuOpen}>
           <Burger
-            openMenu={openMenu}
-            setOpenMenu={setOpenMenu}
+            openMenu={isMenuOpen}
+            setOpenMenu={setMenuOpen}
             menuID={menuId}
           />
           <SideMenu
-            openMenu={openMenu}
-            setOpenMenu={setOpenMenu}
+            isMenuOpen={isMenuOpen}
+            setMenuOpen={setMenuOpen}
             menuID={menuId}
           />
         </FocusLock>
