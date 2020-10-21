@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const StyledMenu = styled.nav`
   position: absolute;
@@ -67,6 +67,15 @@ const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
   const isMenuHidden = isMenuOpen ? true : false;
   const tabIndex = isMenuHidden ? 0 : -1;
 
+  // USELOCATION - REACT ROUTER
+  // React Router NavLink attributes automatically an "active" className
+  // to the active NavLink (when it matches the URL)
+  // It is possible to make a NavLink active when a URL doesn't match, with the
+  // isActive function and Regex filter (with the different routes).
+  // Example : Click on Resume Link --> Route to Resume (/resume) + activeClassName
+  // for About Tab (/about). This choice, because Resume is a part of the About submenu
+  const { pathname } = useLocation();
+
   return (
     <StyledMenu isMenuOpen={isMenuOpen} id={menuID} aria-hidden={!isMenuHidden}>
       <StyledNav>
@@ -84,6 +93,9 @@ const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
           to="/about"
           tabIndex={tabIndex}
           onClick={() => setMenuOpen(!isMenuOpen)}
+          isActive={() =>
+            ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
+          }
         >
           <span aria-hidden="true">&#128040;</span>
           About

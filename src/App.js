@@ -20,6 +20,7 @@ import Footer from "./components/Footer/Footer";
 // TODO - Multilingual
 // TODO - Aum Icon
 // TODO - Footer's Links
+// TODO - Close Side Menu ( !== display : none / visibility : hidden) when screen resizes (up)
 // TODO - Read.me
 
 

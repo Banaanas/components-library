@@ -3,12 +3,12 @@ import styled from "@emotion/styled";
 import FocusLock from "react-focus-lock";
 import { NavLink } from "react-router-dom";
 
-import Shiva from "../../assets/Shiva.svg";
-
 import Burger from "./Burger";
 import SideMenu from "../SideMenu/SideMenu";
 import useOnClickOutside from "../../custom-hooks/useOnClickOutside";
 import NavBar from "./NavBar";
+
+import Shiva from "../../assets/Shiva.svg";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -16,7 +16,7 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 10%;
+  height: 8rem;
   background-color: ${({ theme }) => theme.colors.secondary.common};
 
   button {
@@ -29,7 +29,6 @@ const StyledHeader = styled.header`
 `;
 
 const StyledLogo = styled.img`
-  
   width: 4rem;
   background-color: transparent;
 
@@ -39,9 +38,9 @@ const StyledLogo = styled.img`
 `;
 
 const StyledRefDiv = styled.div`
-  @media (min-width: 845px) {
-    display: none !important;
-    background-color: hotpink !important;
+  display: flex;
+  @media (min-width: 710px) {
+    display: none;
   }
 `;
 
@@ -57,7 +56,7 @@ const Header = () => {
     <StyledHeader>
       <NavLink to="/">
         <button type="button">
-          <StyledLogo src={Shiva} alt="Shiva" />
+          <StyledLogo src={Shiva} alt="Shiva Logo" />
         </button>
       </NavLink>
       <NavBar />

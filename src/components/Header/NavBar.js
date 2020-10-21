@@ -4,13 +4,13 @@ import { NavLink, useLocation } from "react-router-dom";
 import { usePopper } from "react-popper";
 
 const StyledNav = styled.nav`
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-around;
   width: 50%;
   padding: 1rem;
 
-  @media (min-width: 845px) {
+  @media (min-width: 710px) {
     display: flex;
   }
 `;
