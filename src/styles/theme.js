@@ -18,13 +18,6 @@ const theme = {
     lg: "992px",
     xl: "1200px",
   },
-/*  mediaQueries: {
-    xs: `(min-width: ${this.breakpoints.xs})`,
-    sm: `(min-width: ${this.breakpoints.sm})`,
-    md: `(min-width: ${this.breakpoints.md})`,
-    lg: `(min-width: ${this.breakpoints.lg})`,
-    xl: `(min-width: ${this.breakpoints.xl})`,
-  },*/
 };
 
 export default theme;

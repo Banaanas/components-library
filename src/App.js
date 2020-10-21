@@ -2,6 +2,7 @@ import React from "react";
 
 import Routes from "./routes/routes";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 
 // TODO - Github
@@ -14,6 +15,12 @@ import Header from "./components/Header/Header";
 // TODO - Semantic HTML
 // TODO - Animation : Pages Transition
 // TODO - Popper
+// TODO - Icons - Tooltip
+// TODO - DarkTheme - ArcoIris Theme
+// TODO - Multilingual
+// TODO - Aum Icon
+// TODO - Footer's Links
+// TODO - Read.me
 
 
 
@@ -22,6 +29,7 @@ const App = () => {
     <React.Fragment>
       <Header />
       <Routes />
+      <Footer/>
     </React.Fragment>
   );
 };

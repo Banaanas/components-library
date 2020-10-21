@@ -29,7 +29,9 @@ const StyledNavLink = styled(NavLink)`
     opacity: 1;
   }
 
-  &.selected {
+  /* React Router NavLink attributes automatically an "active" className
+  to the active NavLink (when it matches the URL) */
+  &.active {
     color: ${({ theme }) => theme.colors.primary.dark};
     opacity: 1;
   }
@@ -53,12 +55,12 @@ const DropdownMenuItem = styled(NavLink)`
   padding: 0.5rem;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: bolder;
-  text-decoration: none;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
 
-  &.selected {
+  &.active {
     opacity: 1;
   }
 
@@ -69,10 +71,16 @@ const DropdownMenuItem = styled(NavLink)`
 
 const NavBar = () => {
   // USELOCATION - REACT ROUTER
+  // React Router NavLink attributes automatically an "active" className
+  // to the active NavLink (when it matches the URL)
+  // It is possible to make a NavLink active when a URL doesn't match, with the
+  // isActive function and Regex filter (with the different routes).
+  // Example : Click on Resume Link --> Route to Resume (/resume) + activeClassName
+  // for About Tab (/about). This choice, because Resume is a part of the About submenu
   const { pathname } = useLocation();
 
   // USESTATE - STATE
-  const [visible, setVisibility] = useState(false);
+  const [isVisible, setDropDownMenuVisible] = useState(false);
   const referenceRef = useRef(null);
   const popperRef = useRef(null);
 
@@ -94,25 +102,40 @@ const NavBar = () => {
     },
   );
 
-  // OPEN DROP DOWN MENU - FUNCTION
+  // OPEN DROPDOWN MENU - FUNCTION
   const handleOpenMenu = () => {
-    setVisibility(true);
+    setDropDownMenuVisible(true);
   };
 
-  // CLOSE DROP DOWN MENU - FUNCTION
+  // CLOSE DROPDOWN MENU - FUNCTION
   const handleCloseMenu = () => {
-    setVisibility(false);
+    setDropDownMenuVisible(false);
   };
+
+  // DROPDOWN MENU ITEMS - ABOUT TAB
+  const menuItems = [
+    {
+      name: "Cyrilo",
+      route: "/cyrilo",
+    },
+    {
+      name: "Vision",
+      route: "/vision",
+    },
+    {
+      name: "Resume",
+      route: "/resume",
+    },
+  ];
 
   return (
     <React.Fragment>
       <StyledNav>
-        <StyledNavLink exact to="/" activeClassName="selected">
+        <StyledNavLink exact to="/">
           HOME
         </StyledNavLink>
         <StyledNavLink
           to="/about"
-          activeClassName="selected"
           isActive={() =>
             ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
           }
@@ -123,43 +146,26 @@ const NavBar = () => {
         >
           ABOUT
         </StyledNavLink>
-        <StyledNavLink to="/work" activeClassName="selected">
-          WORK
-        </StyledNavLink>
-        <StyledNavLink to="/contact" activeClassName="selected">
-          CONTACT
-        </StyledNavLink>
+        <StyledNavLink to="/work">WORK</StyledNavLink>
+        <StyledNavLink to="/contact">CONTACT</StyledNavLink>
       </StyledNav>
       <DropdownMenu
         onMouseEnter={handleOpenMenu}
         onMouseLeave={handleCloseMenu}
-        activeClassName="selected" // Active Class for NavLink / Based on useLocation
         ref={popperRef}
         style={styles.popper}
         {...attributes.popper}
-        visible={visible}
+        visible={isVisible}
       >
-        <DropdownMenuItem
-          to="/cyrilo"
-          activeClassName="selected"
-          onClick={handleCloseMenu}
-        >
-          Cyrilo
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          to="/vision"
-          activeClassName="selected"
-          onClick={handleCloseMenu}
-        >
-          Vision
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          to="/resume"
-          activeClassName="selected"
-          onClick={handleCloseMenu}
-        >
-          Resume
-        </DropdownMenuItem>
+        {menuItems.map((item) => (
+          <DropdownMenuItem
+            to={item.route}
+            onClick={handleCloseMenu}
+            key={`${item.name}${item.route}`}
+          >
+            {item.name}
+          </DropdownMenuItem>
+        ))}
       </DropdownMenu>
     </React.Fragment>
   );

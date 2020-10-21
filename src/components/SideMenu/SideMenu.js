@@ -15,7 +15,7 @@ const StyledMenu = styled.nav`
   text-align: left;
   background-color: ${({ theme }) => theme.colors.secondary.common};
   transform: ${({ isMenuOpen }) =>
-  isMenuOpen ? "translateX(0)" : "translateX(-100%)"};
+    isMenuOpen ? "translateX(0)" : "translateX(-100%)"};
   transition: transform 0.3s ease-in-out;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
@@ -42,8 +42,8 @@ const StyledNavLink = styled(NavLink)`
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   text-decoration: none;
-  transition: color 0.3s linear;
   opacity: 0.5;
+  transition: color 0.3s linear;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 1.5rem;
@@ -55,23 +55,24 @@ const StyledNavLink = styled(NavLink)`
     opacity: 1;
   }
 
-  &.selected {
+  /* React Router NavLink attributes automatically an "active" className
+  to the active NavLink (when it matches the URL) */
+  &.active {
     color: ${({ theme }) => theme.colors.primary.dark};
     opacity: 1;
   }
 `;
 
-const SideMenu = ({ isMenuOpen, setMenuOpen,  menuID }) => {
-  const isHidden = isMenuOpen ? true : false;
-  const tabIndex = isHidden ? 0 : -1;
+const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
+  const isMenuHidden = isMenuOpen ? true : false;
+  const tabIndex = isMenuHidden ? 0 : -1;
 
   return (
-    <StyledMenu isMenuOpen={isMenuOpen} id={menuID} aria-hidden={!isHidden}>
+    <StyledMenu isMenuOpen={isMenuOpen} id={menuID} aria-hidden={!isMenuHidden}>
       <StyledNav>
         <StyledNavLink
           exact
           to="/"
-          activeClassName="selected"
           tabIndex={tabIndex}
           onClick={() => setMenuOpen(!isMenuOpen)}
         >
@@ -81,7 +82,6 @@ const SideMenu = ({ isMenuOpen, setMenuOpen,  menuID }) => {
 
         <StyledNavLink
           to="/about"
-          activeClassName="selected"
           tabIndex={tabIndex}
           onClick={() => setMenuOpen(!isMenuOpen)}
         >
@@ -90,7 +90,6 @@ const SideMenu = ({ isMenuOpen, setMenuOpen,  menuID }) => {
         </StyledNavLink>
         <StyledNavLink
           to="/work"
-          activeClassName="selected"
           tabIndex={tabIndex}
           onClick={() => setMenuOpen(!isMenuOpen)}
         >
@@ -99,7 +98,6 @@ const SideMenu = ({ isMenuOpen, setMenuOpen,  menuID }) => {
         </StyledNavLink>
         <StyledNavLink
           to="/contact"
-          activeClassName="selected"
           tabIndex={tabIndex}
           onClick={() => setMenuOpen(!isMenuOpen)}
         >

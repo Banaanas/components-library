@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <NavLink to="/" activeClassName="selected">
+      <NavLink to="/">
         <button type="button">
           <StyledLogo src={Shiva} alt="Shiva" />
         </button>
