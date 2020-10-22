@@ -1,12 +1,12 @@
-const theme = {
+const appTheme = {
   colors: {
     primary: {
-      common: "#1a237e",
+      main: "#1a237e",
       dark: "#000051",
       light: "#534bae",
     },
     secondary: {
-      common: "#c5cae9",
+      main: "#c5cae9",
       dark: "#9499b7",
       light: "#f8fdff",
     },
@@ -20,4 +20,4 @@ const theme = {
   },
 };
 
-export default theme;
+export default appTheme;

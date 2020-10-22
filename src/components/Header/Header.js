@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 import FocusLock from "react-focus-lock";
-import { NavLink } from "react-router-dom";
 
-import Burger from "./Burger";
+import Burger from "../SideMenu/Burger";
 import SideMenu from "../SideMenu/SideMenu";
 import useOnClickOutside from "../../custom-hooks/useOnClickOutside";
 import NavBar from "./NavBar";
@@ -11,13 +11,14 @@ import NavBar from "./NavBar";
 import Shiva from "../../assets/Shiva.svg";
 
 const StyledHeader = styled.header`
+  position: fixed;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 8rem;
-  background-color: ${({ theme }) => theme.colors.secondary.common};
+  background-color: ${({ theme }) => theme.colors.secondary.main};
 
   button {
     width: auto;

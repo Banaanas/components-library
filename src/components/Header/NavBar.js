@@ -41,7 +41,7 @@ const DropdownMenu = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
-  background-color: ${({ theme }) => theme.colors.secondary.common};
+  background-color: ${({ theme }) => theme.colors.secondary.main};
   border-radius: 5px;
   visibility: ${(props) => (props.visible ? "visible" : "hidden")};
   opacity: ${(props) => (props.visible ? 1 : 0)};

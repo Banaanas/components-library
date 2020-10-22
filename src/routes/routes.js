@@ -17,12 +17,15 @@ const Routes = () => (
     <Route path="/about">
       <AboutPage />
     </Route>
+
     <Route path="/cyrilo">
       <CyriloPage />
     </Route>
+
     <Route path="/vision">
       <VisionPage />
     </Route>
+
     <Route path="/resume">
       <ResumePage />
     </Route>

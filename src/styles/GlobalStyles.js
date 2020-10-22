@@ -28,7 +28,6 @@ const GlobalStyles = () => {
           justify-content: center;
           height: 100%;
           min-height: 100%;
-          color: ${theme.colors.secondary.light};
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
             Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
             "Segoe UI Symbol";
@@ -42,6 +41,7 @@ const GlobalStyles = () => {
           width: 100%;
           height: 100%;
           min-height: 100%;
+          color: ${theme.colors.secondary.light};
           background-color: ${theme.colors.primary.dark};
         }
       `}

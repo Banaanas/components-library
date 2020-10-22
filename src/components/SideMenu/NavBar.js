@@ -16,7 +16,7 @@ const StyledMenu = styled.nav`
   text-align: left;
   background-color: ${({ theme }) => theme.colors.secondary.main};
   transform: ${({ isMenuOpen }) =>
-    isMenuOpen ? "translateX(0)" : "translateX(-100%)"};
+  isMenuOpen ? "translateX(0)" : "translateX(-100%)"};
   transition: transform, 400ms ease;
 `;
 
@@ -67,6 +67,7 @@ const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
   // for About Tab (/about). This choice, because Resume is a part of the About submenu
   const { pathname } = useLocation();
 
+  const NavBar =() =>{
   return (
     <StyledMenu
       isMenuOpen={isMenuOpen}
@@ -112,7 +113,7 @@ const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
           Contact
         </StyledNavLink>
       </StyledNav>
-    </StyledMenu>
-  );
-};
-export default SideMenu;
+    </StyledMenu>  );
+}
+
+export default NavBar;
