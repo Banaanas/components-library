@@ -18,16 +18,10 @@ const GlobalStyles = () => {
         html {
           box-sizing: border-box;
           height: 100%;
-          min-height: 100%;
           font-size: 62.5%;
         }
         body {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
           height: 100%;
-          min-height: 100%;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
             Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
             "Segoe UI Symbol";
@@ -39,7 +33,6 @@ const GlobalStyles = () => {
           align-items: center;
           justify-content: space-between;
           width: 100%;
-          height: 100%;
           min-height: 100%;
           color: ${theme.colors.secondary.light};
           background-color: ${theme.colors.primary.dark};

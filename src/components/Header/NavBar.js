@@ -55,7 +55,8 @@ const DropdownMenuItem = styled(NavLink)`
   padding: 0.5rem;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: bolder;
-  text-transform: uppercase;
+  font-size: 2rem;
+  text-transform: capitalize;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;

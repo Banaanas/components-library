@@ -11,7 +11,6 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 10rem;
   min-height: 10rem;
   padding-top: 1rem;
   background-color: ${({ theme }) => theme.colors.secondary.main};

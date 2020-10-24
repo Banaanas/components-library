@@ -3,7 +3,8 @@ import React from "react";
 import Routes from "./routes/routes";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-
+import SideMenu from "./components/SideMenu/SideMenu";
+import HomePage from "./pages/Home";
 
 // TODO - Github
 // TODO - Make submenu appear in SideBar
@@ -24,20 +25,24 @@ import Footer from "./components/Footer/Footer";
 // TODO - Aum Icon
 // TODO - Footer's Links
 // TODO - Close Side Menu ( !== display : none / visibility : hidden) when screen resizes (up)
+// https://stackoverflow.com/questions/46586165/react-conditionally-render-based-on-viewport-size
+// https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/
+// Warning - SSR
+// https://github.com/artsy/fresnel
 // TODO - Read.me
-// TODO - Header - Position fixed ?
+// TODO - <<Header - Position fixed ?
 // TODO - Modify max-width: ${({ theme }) => theme.breakpoints.sm
 // where it is, and chose precise value
 // TODO - CSS will-change property
-
-
+// TODO - Color Text Selection
 
 const App = () => {
   return (
     <React.Fragment>
       <Header />
+      <SideMenu />
       <Routes />
-      <Footer/>
+      <Footer />
     </React.Fragment>
   );
 };

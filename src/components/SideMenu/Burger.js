@@ -2,46 +2,54 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const StyledSideMenuButton = styled.button`
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  width: 4rem;
-  height: 6rem;
-  padding: 0;
+  justify-content: space-evenly;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: transparent;
+  border: 0;
   cursor: pointer;
-  
+
+  @media (min-width: 710px) {
+    display: none;
+  }
+
+  &:focus {
+    color: ${({ theme }) => theme.colors.primary.dark};
+    outline: thin dotted;
+  }
+
   &:hover {
     opacity: 0.8;
   }
 
-
   span {
-    position: relative;
-    width: ${({ openMenu }) => (openMenu ? "4rem" : "4rem")};
-    height: 0.75rem;
-    background-color: ${({ theme, openMenu }) =>
-      openMenu ? theme.colors.primary.dark : theme.colors.primary.dark};
+    width: ${({ openMenu }) => (openMenu ? "4.65rem" : "4.5rem")};
+    height: 1.5rem;
+    background-color: ${({ theme }) => theme.colors.primary.dark};
     border-radius: 10px;
-    transform-origin: 1px;
-    transition: all 0.3s linear;
+    transform-origin: left center;
+    transition: transform, width, 300ms ease-out;
   }
 
   span:first-of-type {
-    transform: ${({ openMenu }) => (openMenu ? "rotate(45deg)" : "rotate(0)")};
+    transform: ${({ openMenu }) =>
+      openMenu ? "translateX(8px) rotate(45deg)" : "rotate(0)"};
   }
 
   span:nth-of-type(2n) {
-    transform: ${({ openMenu }) => (openMenu ? "rotate(-45deg)" : "rotate(0)")};
-    opacity: ${({ openMenu }) => (openMenu ? "0" : "1")};
+    width: ${({ openMenu }) => (openMenu ? "0" : "4.5rem")};
+    margin: 0.5rem 0;
   }
 
   span:nth-of-type(3n) {
-    transform: ${({ openMenu }) => (openMenu ? "rotate(-45deg)" : "rotate(0)")};
-  }
-
-  @media (min-width: 420px) {
-    display: flex;
+    transform: ${({ openMenu }) =>
+      openMenu ? "translateX(8px) rotate(-45deg)" : "rotate(0)"};
   }
 `;
 

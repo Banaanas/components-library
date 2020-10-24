@@ -4,7 +4,6 @@ import { NavLink, useLocation } from "react-router-dom";
 
 const StyledMenu = styled.nav`
   position: fixed;
-  top: 0;
   left: 0;
   z-index: 1;
   display: flex;
@@ -16,8 +15,8 @@ const StyledMenu = styled.nav`
   text-align: left;
   background-color: ${({ theme }) => theme.colors.secondary.main};
   transform: ${({ isMenuOpen }) =>
-  isMenuOpen ? "translateX(0)" : "translateX(-100%)"};
-  transition: transform, 400ms ease;
+    isMenuOpen ? "translateX(0)" : "translateX(-100%)"};
+  transition: transform, 300ms ease;
 `;
 
 const StyledNav = styled.nav`
@@ -54,7 +53,7 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
-const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
+const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
   const isMenuDisplayed = isMenuOpen ? true : false;
   const tabIndex = isMenuDisplayed ? 0 : -1;
 
@@ -67,7 +66,6 @@ const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
   // for About Tab (/about). This choice, because Resume is a part of the About submenu
   const { pathname } = useLocation();
 
-  const NavBar =() =>{
   return (
     <StyledMenu
       isMenuOpen={isMenuOpen}
@@ -79,7 +77,7 @@ const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
           exact
           to="/"
           tabIndex={tabIndex}
-          onClick={() => setMenuOpen(!isMenuOpen)}
+          onClick={() => setMenuOpen(false)}
         >
           <span aria-hidden="true">&#128060;</span>
           Home
@@ -88,7 +86,7 @@ const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
         <StyledNavLink
           to="/about"
           tabIndex={tabIndex}
-          onClick={() => setMenuOpen(!isMenuOpen)}
+          onClick={() => setMenuOpen(false)}
           isActive={() =>
             ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
           }
@@ -99,7 +97,7 @@ const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
         <StyledNavLink
           to="/work"
           tabIndex={tabIndex}
-          onClick={() => setMenuOpen(!isMenuOpen)}
+          onClick={() => setMenuOpen(false)}
         >
           <span aria-hidden="true">&#128047;</span>
           Work
@@ -107,13 +105,14 @@ const SideMenu = ({ isMenuOpen, setMenuOpen, menuID }) => {
         <StyledNavLink
           to="/contact"
           tabIndex={tabIndex}
-          onClick={() => setMenuOpen(!isMenuOpen)}
+          onClick={() => setMenuOpen(false)}
         >
           <span aria-hidden="true">&#128048;</span>
           Contact
         </StyledNavLink>
       </StyledNav>
-    </StyledMenu>  );
-}
+    </StyledMenu>
+  );
+};
 
 export default NavBar;
