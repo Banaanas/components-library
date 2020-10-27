@@ -1,17 +1,21 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { NavLink, useLocation } from "react-router-dom";
+import { useSwipeable } from "react-swipeable";
 
 const StyledMenu = styled.nav`
   position: fixed;
+  top: 0;
   left: 0;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 75%;
+  max-width: calc(710px - 25%);
   min-height: 100%;
-  padding: 0 2rem;
+  overflow: hidden;
   text-align: left;
   background-color: ${({ theme }) => theme.colors.secondary.main};
   transform: ${({ isMenuOpen }) =>
@@ -31,10 +35,12 @@ const StyledNavLink = styled(NavLink)`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   padding: 2rem 0;
   color: ${({ theme }) => theme.colors.primary.dark};
+  color: deeppink;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -51,6 +57,11 @@ const StyledNavLink = styled(NavLink)`
     color: ${({ theme }) => theme.colors.primary.dark};
     opacity: 1;
   }
+
+  /* Icons */
+  span {
+    margin-right: 2rem;
+  }
 `;
 
 const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
@@ -66,11 +77,18 @@ const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
   // for About Tab (/about). This choice, because Resume is a part of the About submenu
   const { pathname } = useLocation();
 
+  // React Swipe Event Handler - Close SideMenu when onSwipedLeft
+  const handlers = useSwipeable({
+    trackMouse: true,
+    onSwipedLeft: () => setMenuOpen(false),
+  });
+
   return (
     <StyledMenu
       isMenuOpen={isMenuOpen}
       id={menuID}
       aria-hidden={!isMenuDisplayed}
+      {...handlers}
     >
       <StyledNav>
         <StyledNavLink

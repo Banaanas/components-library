@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.35",
+    "@emotion/is-prop-valid": "^0.8.8",
     "@emotion/styled": "^10.0.27",
     "@popperjs/core": "^2.5.3",
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,7 +17,8 @@
     "react-icons": "^3.11.0",
     "react-popper": "^2.2.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "react-swipeable": "^5.5.1"
   },
   "scripts": {
     "start": "react-scripts start",

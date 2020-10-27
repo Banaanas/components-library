@@ -29,7 +29,7 @@ const StyledSideMenuButton = styled.button`
   }
 
   span {
-    width: ${({ openMenu }) => (openMenu ? "4.65rem" : "4.5rem")};
+    width: ${({ openMenu }) => (openMenu ? "4.5rem" : "4.5rem")};
     height: 1.5rem;
     background-color: ${({ theme }) => theme.colors.primary.dark};
     border-radius: 10px;

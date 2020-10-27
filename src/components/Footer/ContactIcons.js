@@ -1,8 +1,9 @@
 import React from "react";
+import styled from "@emotion/styled";
 import { VscGithubInverted as GithubIcon } from "react-icons/vsc";
 import { IoMdMail as MailIcon } from "react-icons/io";
 import { ImLinkedin as LinkedInIcon } from "react-icons/im";
-import styled from "@emotion/styled";
+import { HiHome as HomeIcon } from "react-icons/hi";
 
 const StyledSocialIconsContainer = styled.div`
   display: flex;
@@ -23,6 +24,13 @@ const StyledSocialIconsContainer = styled.div`
 const ContactIcons = () => (
   <StyledSocialIconsContainer>
     <a
+      aria-label="Personal Website"
+      href="https://cyrilo.dev"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <HomeIcon />
+    </a> <a
       aria-label="Github Profile Link"
       href="https://github.com/Banaanas"
       target="_blank"

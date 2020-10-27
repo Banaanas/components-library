@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 import styled from "@emotion/styled";
 import FocusLock from "react-focus-lock";
-import Burger from "./Burger";
 import useOnClickOutside from "../../custom-hooks/useOnClickOutside";
+import Burger from "./Burger";
 import NavBar from "./NavBar";
 
 const StyledRefDiv = styled.div`
+  width: 50rem;
 `;
 
 const SideMenu = () => {
