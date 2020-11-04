@@ -1,36 +1,13 @@
 import React from "react";
-import styled from "@emotion/styled";
 import Ganesh from "../assets/Ganesh.svg";
-
-const StyledMain = styled.main`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  margin-top: 8rem; /* To match the Fixed Header Height */
-  padding: 4rem;
-  font-size: 2rem;
-`;
-
-const StyledImg = styled.img`
-  width: 20rem;
-  height: auto;
-  background-color: transparent;
-`;
-
-const StyledTitle = styled.h1`
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-`;
+import StyledPageMain from "../components/StyledComponents/StyledPageMain";
+import StyledImg from "../components/StyledComponents/StyledImg";
+import StyledHeading from "../components/StyledComponents/StyledHeading";
 
 const HomePage = () => (
-  <StyledMain>
+  <StyledPageMain>
     <StyledImg src={Ganesh} alt="Ganesh Icon" />
-    <StyledTitle>Cyrilo</StyledTitle>
+    <StyledHeading>Cyrilo</StyledHeading>
     <p>
       I thought every German was you. And the language obscene An engine, an
       engine, Chuffing me off like a Jew. A Jew to Dachau, Auschwitz, Belsen. I
@@ -308,7 +285,7 @@ const HomePage = () => (
       torrent of darkness among the gusty trees, The moon was a ghostly galleon
       tossed upon cloudy seas, The road was a ribbon of moonlight over the
     </p>
-  </StyledMain>
+  </StyledPageMain>
 );
 
 export default HomePage;

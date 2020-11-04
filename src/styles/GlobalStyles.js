@@ -33,6 +33,7 @@ const GlobalStyles = () => {
           align-items: center;
           justify-content: space-between;
           width: 100%;
+          min-width: 300px;
           min-height: 100%;
           color: ${theme.colors.secondary.light};
           background-color: ${theme.colors.primary.dark};

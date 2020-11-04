@@ -18,6 +18,7 @@ const StyledMenu = styled.nav`
   overflow: hidden;
   text-align: left;
   background-color: ${({ theme }) => theme.colors.secondary.main};
+  box-shadow: -3px 0 10px 0 #555;
   transform: ${({ isMenuOpen }) =>
     isMenuOpen ? "translateX(0)" : "translateX(-100%)"};
   transition: transform, 300ms ease;
@@ -38,7 +39,6 @@ const StyledNavLink = styled(NavLink)`
   width: 100%;
   padding: 2rem 0;
   color: ${({ theme }) => theme.colors.primary.dark};
-  color: deeppink;
   font-weight: bold;
   font-size: 3rem;
   letter-spacing: 0.5rem;

@@ -40,7 +40,6 @@ const App = () => {
   return (
     <React.Fragment>
       <Header />
-      <SideMenu />
       <Routes />
       <Footer />
     </React.Fragment>

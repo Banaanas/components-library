@@ -6,7 +6,9 @@ import Burger from "./Burger";
 import NavBar from "./NavBar";
 
 const StyledRefDiv = styled.div`
-  width: 50rem;
+  @media (min-width: 710px) {
+    display: none;
+  }
 `;
 
 const SideMenu = () => {

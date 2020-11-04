@@ -4,9 +4,13 @@ import styled from "@emotion/styled";
 
 import NavBar from "./NavBar";
 import Shiva from "../../assets/Shiva.svg";
+import SideMenu from "../SideMenu/SideMenu";
 
 const StyledHeader = styled.header`
   position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -21,20 +25,24 @@ const StyledHeader = styled.header`
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    
-      &:focus {
-    color: ${({ theme }) => theme.colors.primary.dark};
-    outline: thin dotted;
-  }
+
+    &:focus {
+      color: ${({ theme }) => theme.colors.primary.dark};
+      outline: thin dotted;
+    }
   }
 `;
 
 const StyledLogo = styled.img`
-  width: 4rem;
+  height: 6.5rem;
   background-color: transparent;
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media (min-width: 710px) {
+    height: 6.5rem;
   }
 `;
 
@@ -47,6 +55,7 @@ const Header = () => {
         </button>
       </NavLink>
       <NavBar />
+      <SideMenu />
     </StyledHeader>
   );
 };
