@@ -8,8 +8,6 @@ import SideMenu from "../SideMenu/SideMenu";
 
 const StyledHeader = styled.header`
   position: fixed;
-  top: 0;
-  right: 0;
   z-index: 1;
   display: flex;
   flex-direction: row;
@@ -18,24 +16,17 @@ const StyledHeader = styled.header`
   width: 100%;
   height: 8rem;
   background-color: ${({ theme }) => theme.colors.secondary.main};
-
-  button {
-    width: auto;
-    padding: 1rem;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-
-    &:focus {
-      color: ${({ theme }) => theme.colors.primary.dark};
-      outline: thin dotted;
-    }
-  }
 `;
 
-const StyledLogo = styled.img`
-  height: 6.5rem;
-  background-color: transparent;
+const StyledButton = styled.button`
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: url(${Shiva}) no-repeat; /* Logo */
+  background-size: contain;
+  border: 0;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
@@ -44,20 +35,22 @@ const StyledLogo = styled.img`
   @media (min-width: 710px) {
     height: 6.5rem;
   }
+
+  &:focus {
+    color: ${({ theme }) => theme.colors.primary.dark};
+    outline: thin dotted;
+  }
 `;
 
-const Header = () => {
-  return (
-    <StyledHeader>
-      <NavLink to="/">
-        <button type="button">
-          <StyledLogo src={Shiva} alt="Shiva Logo" />
-        </button>
-      </NavLink>
-      <NavBar />
-      <SideMenu />
-    </StyledHeader>
-  );
-};
+const Header = () => (
+  <StyledHeader>
+    <NavLink to="/">
+      <StyledButton type="button"/>
+    </NavLink>
+    <NavBar />
+    <SideMenu />
+  </StyledHeader>
+);
+
 
 export default Header;
