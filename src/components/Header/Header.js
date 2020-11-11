@@ -8,6 +8,8 @@ import SideMenu from "../SideMenu/SideMenu";
 
 const StyledHeader = styled.header`
   position: fixed;
+  top: 0;
+  right: 0;
   z-index: 1;
   display: flex;
   flex-direction: row;
@@ -45,12 +47,11 @@ const StyledButton = styled.button`
 const Header = () => (
   <StyledHeader>
     <NavLink to="/">
-      <StyledButton type="button"/>
+      <StyledButton type="button" />
     </NavLink>
     <NavBar />
     <SideMenu />
   </StyledHeader>
 );
-
 
 export default Header;

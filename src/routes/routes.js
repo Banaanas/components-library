@@ -38,7 +38,7 @@ const Routes = () => (
       <ContactPage />
     </Route>
 
-    <Route render={() => <Redirect to="/" />} />
+    <Redirect to="/" />
   </Switch>
 );
 
