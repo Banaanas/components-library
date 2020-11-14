@@ -43,8 +43,8 @@ const DropdownMenu = styled.div`
   padding: 0.5rem;
   background-color: ${({ theme }) => theme.colors.secondary.main};
   border-radius: 5px;
-  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
-  opacity: ${(props) => (props.visible ? 1 : 0)};
+  visibility: ${({ visible }) => (visible ? "visible" : "hidden")};
+  opacity: ${({ visible }) => (visible ? 1 : 0)};
   transition: background-color, opacity 250ms linear;
 `;
 
