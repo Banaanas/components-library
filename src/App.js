@@ -3,8 +3,6 @@ import React from "react";
 import Routes from "./routes/routes";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import SideMenu from "./components/SideMenu/SideMenu";
-import HomePage from "./pages/Home";
 
 // TODO - Github
 // TODO - Make submenu appear in SideBar

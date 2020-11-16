@@ -20,7 +20,6 @@ const StyledSocialIconsContainer = styled.div`
     background-color: ${({ theme }) => theme.colors.secondary.main};
   }
 `;
-
 const ContactIcons = () => (
   <StyledSocialIconsContainer>
     <a
