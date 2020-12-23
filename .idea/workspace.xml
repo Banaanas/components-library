@@ -5,48 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e05b2b57-101d-4dac-86d2-4913d52b6635" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.huskyrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/components-library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/components2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppWrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/ContactIcons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/ContactIcons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/SubFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/SubFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideMenu/Burger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideMenu/Burger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideMenu/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideMenu/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideMenu/SideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideMenu/SideMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StyledComponents/StyledImg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StyledComponents/StyledImg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StyledComponents/StyledPageMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StyledComponents/StyledPageMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cyrilo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cyrilo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Resume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Resume.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Vision.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Vision.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Work.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Work.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <disabled>
       <disabled_changelists>
@@ -117,7 +77,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blogslist-app-frontend-FSO" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cyrilo-portfolio" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -168,7 +128,17 @@
       <workItem from="1608705799764" duration="135000" />
       <workItem from="1608706001420" duration="8355000" />
       <workItem from="1608715230855" duration="870000" />
+      <workItem from="1608716120681" duration="1925000" />
+      <workItem from="1608730992639" duration="7000" />
     </task>
+    <task id="LOCAL-00001" summary="Refactor">
+      <created>1608716138455</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608716138455</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +157,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
