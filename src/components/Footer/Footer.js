@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "@emotion/styled";
 
 import ContactIcons from "./ContactIcons";
@@ -11,8 +10,8 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 10rem;
-  padding-top: 1rem;
+  min-height: 3rem;
+  padding-top: 0.5rem;
   background-color: ${({ theme }) => theme.colors.secondary.main};
 `;
 

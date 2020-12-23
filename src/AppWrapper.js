@@ -1,4 +1,3 @@
-import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
@@ -7,12 +6,12 @@ import GlobalStyles from "./styles/GlobalStyles";
 
 const AppWrapper = () => (
   <ThemeProvider theme={appTheme}>
-    <React.Fragment>
+    <>
       <GlobalStyles /> {/* Apply Emotion Global Styles */}
       <Router>
         <App />
       </Router>
-    </React.Fragment>
+    </>
   </ThemeProvider>
 );
 

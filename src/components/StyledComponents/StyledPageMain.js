@@ -8,9 +8,11 @@ const StyledPageMain = styled.main`
   justify-content: center;
   width: 100%;
   height: auto;
-  margin-top: 8rem; /* To match the Fixed Header Height */
-  padding: 4rem;
-  font-size: 2rem;
+  margin-top: 4rem; /* To match the Fixed Header Height */
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: justify;
 `;
 
 export default StyledPageMain;

@@ -1,22 +1,24 @@
 {
   "extends": [
-    "react-app",
-    "airbnb",
-    "airbnb/hooks",
+    /*"airbnb",
+    "airbnb/hooks",*/
+    "plugin:cypress/recommended",
+    "plugin:eslint-comments/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
     "prettier",
-    "prettier/react"
+    "prettier/react",
+    "plugin:prettier/recommended" // Must be the last extension - https://www.npmjs.com/package/eslint-plugin-prettier
   ],
-  "plugins": ["cypress", "jest", "jsx-a11y"],
+  "plugins": [
+    "cypress",
+    "import",
+    "jest",
+    "jest-formatting",
+    "prettier",
+    "testing-library"
+  ],
   "rules": {
-    // Authorize double-quote use
-    "quotes": [
-      1,
-      "double",
-      {
-        "avoidEscape": true
-      }
-    ],
     "comma-dangle": [
       "error",
       {
@@ -30,13 +32,30 @@
         "functions": "only-multiline"
       }
     ],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/jsx-fragments": ["error", "element"],
+    "prettier/prettier": "error",
+    // Authorize double-quote use
+    "quotes": [
+      1,
+      "double",
+      {
+        "avoidEscape": true
+      }
+    ],
+    // Disable forbid-prop-types rule
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
     "react/jsx-pascal-case": [
       1,
       {
         "allowAllCaps": false
       }
-    ]
+    ],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }

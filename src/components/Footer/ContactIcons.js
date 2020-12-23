@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "@emotion/styled";
-import { VscGithubInverted as GithubIcon } from "react-icons/vsc";
+import { HiOutlineGlobeAlt as PersonalWebsiteIcon } from "react-icons/hi";
+import { VscGithubInverted as GitHubIcon } from "react-icons/vsc";
 import { IoMdMail as MailIcon } from "react-icons/io";
 import { ImLinkedin as LinkedInIcon } from "react-icons/im";
-import { HiOutlineGlobeAlt as PersonalWebsiteIcon } from "react-icons/hi";
 
 const StyledSocialIconsContainer = styled.div`
   display: flex;
@@ -11,13 +10,21 @@ const StyledSocialIconsContainer = styled.div`
   width: 100%;
 
   a {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
   }
 
   svg {
     color: ${({ theme }) => theme.colors.primary.dark};
-    font-size: 3rem;
+    font-size: 1.5rem;
     background-color: ${({ theme }) => theme.colors.secondary.main};
+    transform: scale(1);
+    opacity: 0.9;
+    transition: transform, opacity, 200ms ease;
+  }
+
+  svg:hover {
+    transform: scale(1.1);
+    opacity: 1;
   }
 `;
 const ContactIcons = () => (
@@ -27,24 +34,32 @@ const ContactIcons = () => (
       href="https://cyrilo.dev"
       target="_blank"
       rel="noopener noreferrer"
+      title="https://cyrilo.dev"
     >
       <PersonalWebsiteIcon />
-    </a> <a
-      aria-label="Github Profile Link"
+    </a>
+    <a
+      aria-label="GitHub Profile Link"
       href="https://github.com/Banaanas"
       target="_blank"
       rel="noopener noreferrer"
+      title="GitHub Profile"
     >
-      <GithubIcon />
+      <GitHubIcon />
     </a>
-    <a aria-label="Cyrilo Dev Mail" href="mailto:cyrilodev@gmail.com">
+    <a
+      aria-label="Cyrilo Dev Mail"
+      href="mailto:cyrilo.dev@gmail.com"
+      title="cyrilo.dev@gmail.com"
+    >
       <MailIcon />
     </a>
     <a
-      aria-label="LinkedIn Link"
-      href="https://linkedin.com"
+      aria-label="LinkedIn Profile"
+      href="https://www.linkedin.com/in/cyril-dev/"
       target="_blank"
       rel="noopener noreferrer"
+      title="LinkedIn Profile"
     >
       <LinkedInIcon />
     </a>

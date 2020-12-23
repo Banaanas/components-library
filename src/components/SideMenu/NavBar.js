@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "@emotion/styled";
 import { NavLink, useLocation } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
@@ -29,22 +28,21 @@ const StyledNav = styled.nav`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
 `;
 
 const StyledNavLink = styled(NavLink)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 2rem 0;
+  padding: 1rem 0;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: bold;
-  font-size: 3rem;
-  letter-spacing: 0.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
   text-decoration: none;
-  opacity: 0.5;
+  opacity: 0.6;
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary.dark};
@@ -60,7 +58,7 @@ const StyledNavLink = styled(NavLink)`
 
   /* Icons */
   span {
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 `;
 
@@ -88,6 +86,7 @@ const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
       isMenuOpen={isMenuOpen}
       id={menuID}
       aria-hidden={!isMenuDisplayed}
+      /* eslint-disable-next-line react/jsx-props-no-spreading */
       {...handlers}
     >
       <StyledNav>

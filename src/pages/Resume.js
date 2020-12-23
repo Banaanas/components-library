@@ -1,4 +1,3 @@
-import React from "react";
 import Ganesh from "../assets/Ganesh.svg";
 import StyledPageMain from "../components/StyledComponents/StyledPageMain";
 import StyledImg from "../components/StyledComponents/StyledImg";

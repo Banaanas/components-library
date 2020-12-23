@@ -1,10 +1,8 @@
-import React from "react";
-
 import Routes from "./routes/routes";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-// TODO - Github
+// TODO - GitHub
 // TODO - Make submenu appear in SideBar
 // TODO - Close SideBar, if Open, when resizing and NavBar appears
 // TODO - CSS Shapes (eg. waves)
@@ -36,11 +34,11 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
-    <React.Fragment>
+    <>
       <Header />
       <Routes />
       <Footer />
-    </React.Fragment>
+    </>
   );
 };
 

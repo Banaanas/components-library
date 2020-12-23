@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import styled from "@emotion/styled";
 import { NavLink, useLocation } from "react-router-dom";
 import { usePopper } from "react-popper";
@@ -7,7 +7,8 @@ const StyledNav = styled.nav`
   display: none;
   flex-direction: row;
   justify-content: space-around;
-  width: 50%;
+  width: 55%;
+  min-width: 35rem;
   padding: 1rem;
 
   @media (min-width: 710px) {
@@ -21,9 +22,9 @@ const StyledNavLink = styled(NavLink)`
   justify-content: center;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-decoration: none;
-  opacity: 0.5;
+  opacity: 0.6;
 
   &:hover {
     opacity: 1;
@@ -34,6 +35,10 @@ const StyledNavLink = styled(NavLink)`
   &.active {
     color: ${({ theme }) => theme.colors.primary.dark};
     opacity: 1;
+  }
+
+  @media (min-width: 850px) {
+    font-size: 1.4rem;
   }
 `;
 
@@ -55,7 +60,7 @@ const DropdownMenuItem = styled(NavLink)`
   padding: 0.5rem;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
   text-decoration: none;
   cursor: pointer;
@@ -130,7 +135,7 @@ const NavBar = () => {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <StyledNav>
         <StyledNavLink exact to="/">
           HOME
@@ -155,6 +160,7 @@ const NavBar = () => {
         onMouseLeave={handleCloseMenu}
         ref={popperRef}
         style={styles.popper}
+        /* eslint-disable-next-line react/jsx-props-no-spreading */
         {...attributes.popper}
         visible={isVisible}
       >
@@ -168,7 +174,7 @@ const NavBar = () => {
           </DropdownMenuItem>
         ))}
       </DropdownMenu>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -1,16 +1,13 @@
-import React from "react";
 import styled from "@emotion/styled";
 
 const StyledSideMenuButton = styled.button`
-  position: absolute;
-  top: 1.4rem;
-  right: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 0.8rem;
   padding: 0 !important;
   background-color: transparent;
   border: 0;
@@ -26,7 +23,7 @@ const StyledSideMenuButton = styled.button`
   }
 
   span {
-    width: ${({ openMenu }) => (openMenu ? "4.6rem" : "4.5rem")};
+    width: ${({ openMenu }) => (openMenu ? "3.8rem" : "4rem")};
     height: 1.5rem;
     background-color: ${({ theme }) => theme.colors.primary.dark};
     border-radius: 10px;
@@ -40,7 +37,7 @@ const StyledSideMenuButton = styled.button`
   }
 
   span:nth-of-type(2n) {
-    width: ${({ openMenu }) => (openMenu ? "0" : "4.5rem")};
+    width: ${({ openMenu }) => (openMenu ? "0" : "4rem")};
     margin: 0.5rem 0;
   }
 

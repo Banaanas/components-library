@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "@emotion/styled";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -8,7 +7,7 @@ const StyledNav = styled.nav`
   justify-content: space-around;
   width: 100%;
   max-width: 350px;
-  padding: 1rem;
+  padding: 0.5rem;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -19,7 +18,7 @@ const StyledNavLink = styled(NavLink)`
   font-weight: bolder;
   font-size: 1rem;
   text-decoration: none;
-  opacity: 0.5;
+  opacity: 0.6;
 
   &:hover {
     opacity: 1;

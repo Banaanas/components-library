@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import styled from "@emotion/styled";
 import FocusLock from "react-focus-lock";
 import useOnClickOutside from "../../custom-hooks/useOnClickOutside";
@@ -20,7 +20,7 @@ const SideMenu = () => {
   useOnClickOutside(DOMRef, () => setMenuOpen(false));
 
   return (
-    <React.Fragment>
+    <>
       <StyledRefDiv ref={DOMRef}>
         <FocusLock disabled={!isMenuOpen}>
           <Burger
@@ -35,7 +35,7 @@ const SideMenu = () => {
           />
         </FocusLock>
       </StyledRefDiv>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 
@@ -16,14 +15,15 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 8rem;
+  height: 5.5rem;
   background-color: ${({ theme }) => theme.colors.secondary.main};
 `;
 
 const StyledButton = styled.button`
   width: 4.5rem;
   height: 4.5rem;
-  margin: 0 !important;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
   padding: 0 !important;
   background: url(${Shiva}) no-repeat; /* Logo */
   background-size: contain;
@@ -35,7 +35,7 @@ const StyledButton = styled.button`
   }
 
   @media (min-width: 710px) {
-    height: 6.5rem;
+    height: 5rem;
   }
 
   &:focus {
