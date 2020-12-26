@@ -1,6 +1,6 @@
 import Routes from "./routes/routes";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 // TODO - GitHub
 // TODO - Make submenu appear in SideBar
