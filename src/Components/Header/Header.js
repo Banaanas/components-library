@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
-
 import NavBar from "./NavBar";
-import Shiva from "../../assets/Shiva.svg";
 import SideMenu from "../SideMenu/SideMenu";
+import Shiva from "../../assets/Shiva.svg";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -19,7 +18,7 @@ const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.colors.secondary.main};
 `;
 
-const StyledButton = styled.button`
+const StyledImg = styled.img`
   width: 4.5rem;
   height: 4.5rem;
   margin-top: 0.5rem;
@@ -47,7 +46,7 @@ const StyledButton = styled.button`
 const Header = () => (
   <StyledHeader>
     <NavLink to="/">
-      <StyledButton type="button" />
+      <StyledImg />
     </NavLink>
     <NavBar />
     <SideMenu />
