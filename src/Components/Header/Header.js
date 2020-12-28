@@ -41,7 +41,7 @@ const StyledImg = styled.img`
 const Header = () => (
   <StyledHeader>
     <NavLink to="/">
-      <StyledImg src={Shiva} />
+      <StyledImg src={Shiva} alt="HomePage Link" />
     </NavLink>
     <NavBar />
     <SideMenu />
