@@ -56,7 +56,6 @@ const Header = () => {
     // If SSR, Return
     if (typeof window === "undefined") return;
     if (window.pageYOffset > 1) {
-      console.log("hola");
       // Header Drop Shadow when Scroll - No Drop Shadow on Top
       setBoxShadow(`0 0 100px 0 ${theme.colors.primary.light}`);
     } else {
