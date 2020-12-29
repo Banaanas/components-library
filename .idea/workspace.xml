@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e05b2b57-101d-4dac-86d2-4913d52b6635" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SideMenu/SideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SideMenu/SideMenu.js" afterDir="false" />
     </list>
     <disabled>
       <disabled_changelists>
@@ -149,7 +146,7 @@
       <workItem from="1609140512851" duration="97000" />
       <workItem from="1609144860283" duration="702000" />
       <workItem from="1609184506226" duration="621000" />
-      <workItem from="1609258968984" duration="2077000" />
+      <workItem from="1609258968984" duration="2426000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor">
       <created>1608716138455</created>
@@ -200,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609259757407</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactor">
+      <created>1609261385952</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609261385952</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
