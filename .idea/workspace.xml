@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e05b2b57-101d-4dac-86d2-4913d52b6635" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SideMenu/SideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SideMenu/SideMenu.js" afterDir="false" />
     </list>
     <disabled>
       <disabled_changelists>
@@ -63,6 +66,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
@@ -138,6 +149,7 @@
       <workItem from="1609140512851" duration="97000" />
       <workItem from="1609144860283" duration="702000" />
       <workItem from="1609184506226" duration="621000" />
+      <workItem from="1609258968984" duration="2077000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor">
       <created>1608716138455</created>
@@ -174,7 +186,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609140593016</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Shadow to Header when scrolled">
+      <created>1609259692330</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609259692330</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Delete console.log()">
+      <created>1609259757407</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609259757407</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
