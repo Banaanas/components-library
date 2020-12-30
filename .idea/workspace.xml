@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e05b2b57-101d-4dac-86d2-4913d52b6635" name="Default Changelist" comment="" />
+    <list default="true" id="e05b2b57-101d-4dac-86d2-4913d52b6635" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SideMenu/Burger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SideMenu/Burger.js" afterDir="false" />
+    </list>
     <disabled>
       <disabled_changelists>
         <list default="true" id="e05b2b57-101d-4dac-86d2-4913d52b6635" name="Default Changelist" comment="">
@@ -146,6 +150,8 @@
       <workItem from="1609184506226" duration="621000" />
       <workItem from="1609258968984" duration="2426000" />
       <workItem from="1609263473401" duration="393000" />
+      <workItem from="1609264330863" duration="25000" />
+      <workItem from="1609310232303" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor">
       <created>1608716138455</created>
@@ -210,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609263830199</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactor">
+      <created>1609264346782</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609264346782</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
