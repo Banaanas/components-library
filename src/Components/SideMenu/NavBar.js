@@ -79,7 +79,7 @@ const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
   const handleCloseMenu = () => {
     setMenuOpen(false);
 
-    // Remove Background Blur
+    // Remove Background Blur Effect
     const mainElement = document.querySelector("main");
     mainElement.style.filter = "blur(0)";
 

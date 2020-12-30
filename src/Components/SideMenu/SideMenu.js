@@ -31,7 +31,7 @@ const SideMenu = () => {
   useOnClickOutside(DOMRef, () => {
     setMenuOpen(false);
 
-    // Remove Background Blur
+    // Remove Background Blur Effect
     const mainElement = document.querySelector("main");
     mainElement.style.filter = "blur(0)";
 
@@ -46,10 +46,14 @@ const SideMenu = () => {
     // If SSR, Return (because Window is NOT defined on the Node.js Server)
     if (typeof window === "undefined") return;
 
-    // Close SideMenu if it was Open - And set Background Blur to 0
+    // Set Width
     setWidth(width);
+
+    // Close SideMenu if it was Open,
     if (window.innerWidth > 710) {
       setMenuOpen(false);
+
+      // Remove Background Blur Effect
       const mainElement = document.querySelector("main");
       mainElement.style.filter = "blur(0)";
     }
