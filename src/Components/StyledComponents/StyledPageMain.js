@@ -13,6 +13,8 @@ const StyledPageMain = styled.main`
   font-weight: bold;
   font-size: 1rem;
   text-align: justify;
+  filter: blur(0);
+  transition: filter, 300ms ease;
 `;
 
 export default StyledPageMain;
