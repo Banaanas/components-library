@@ -28,7 +28,16 @@ const SideMenu = () => {
   const menuId = "side-menu";
 
   // Close Side SideMenu when click outside the Ref- custom Hook
-  useOnClickOutside(DOMRef, () => setMenuOpen(false));
+  useOnClickOutside(DOMRef, () => {
+    setMenuOpen(false);
+
+    // Remove Background Blur
+    const mainElement = document.querySelector("main");
+    mainElement.style.filter = "blur(0)";
+
+    // Enable Scroll again
+    document.body.style.overflow = "visible";
+  });
 
   // useThrottledFn - CUSTOM HOOK
   // Throttle the callback function to optimize component performances by

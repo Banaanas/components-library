@@ -75,15 +75,22 @@ const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
   // for About Tab (/about). This choice, because Resume is a part of the About submenu
   const { pathname } = useLocation();
 
+  // Handle Close Side Menu - FUNCTION
+  const handleCloseMenu = () => {
+    setMenuOpen(false);
+
+    // Remove Background Blur
+    const mainElement = document.querySelector("main");
+    mainElement.style.filter = "blur(0)";
+
+    // Enable Scroll again
+    document.body.style.overflow = "visible";
+  };
+
   // React Swipe Event Handler - Close SideMenu when onSwipedLeft
-  // - And set Background Blur to 0
   const handlers = useSwipeable({
     trackMouse: true,
-    onSwipedLeft: () => {
-      setMenuOpen(false);
-      const mainElement = document.querySelector("main");
-      mainElement.style.filter = "blur(0)";
-    },
+    onSwipedLeft: () => handleCloseMenu(),
   });
 
   return (
@@ -99,37 +106,33 @@ const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
           exact
           to="/"
           tabIndex={tabIndex}
-          onClick={() => setMenuOpen(false)}
+          onClick={handleCloseMenu}
         >
-          <span aria-hidden="true">&#128060;</span>
+          <span aria-hidden="true">🐼</span>
           Home
         </StyledNavLink>
 
         <StyledNavLink
           to="/about"
           tabIndex={tabIndex}
-          onClick={() => setMenuOpen(false)}
+          onClick={handleCloseMenu}
           isActive={() =>
             ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
           }
         >
-          <span aria-hidden="true">&#128040;</span>
+          <span aria-hidden="true">🐨</span>
           About
         </StyledNavLink>
-        <StyledNavLink
-          to="/work"
-          tabIndex={tabIndex}
-          onClick={() => setMenuOpen(false)}
-        >
-          <span aria-hidden="true">&#128047;</span>
+        <StyledNavLink to="/work" tabIndex={tabIndex} onClick={handleCloseMenu}>
+          <span aria-hidden="true">🐯</span>
           Work
         </StyledNavLink>
         <StyledNavLink
           to="/contact"
           tabIndex={tabIndex}
-          onClick={() => setMenuOpen(false)}
+          onClick={handleCloseMenu}
         >
-          <span aria-hidden="true">&#128048;</span>
+          <span aria-hidden="true">🐰</span>
           Contact
         </StyledNavLink>
       </StyledNav>
