@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 import removeMenuEffects from "../../utils/removeMenuEffects";
 
-const StyledMenu = styled.nav`
+const StyledMenu = styled.div`
   position: fixed;
   top: 0;
   left: 0;
