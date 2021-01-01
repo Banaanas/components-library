@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "@emotion/styled";
 
-const StyledPageMain = styled.main`
+const StyledPageMain = styled(motion.main)`
   display: flex;
   flex: 1;
   flex-direction: column;

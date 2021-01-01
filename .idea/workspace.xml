@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/SideMenu/Burger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SideMenu/Burger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SideMenu/SideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SideMenu/SideMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/removeMenuEffects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/removeMenuEffects.js" afterDir="false" />
     </list>
     <disabled>
       <disabled_changelists>
@@ -166,7 +164,8 @@
       <workItem from="1609405093012" duration="124000" />
       <workItem from="1609405278918" duration="2430000" />
       <workItem from="1609442592522" duration="37000" />
-      <workItem from="1609485126150" duration="2002000" />
+      <workItem from="1609485126150" duration="2285000" />
+      <workItem from="1609524055892" duration="398000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor">
       <created>1608716138455</created>
@@ -294,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609442620179</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Blur Effect">
+      <created>1609495628140</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609495628140</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
