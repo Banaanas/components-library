@@ -87,7 +87,9 @@ const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
   // React Swipe Event Handler - Close SideMenu when onSwipedLeft
   const handlers = useSwipeable({
     trackMouse: true,
-    onSwipedLeft: () => handleCloseMenu(),
+    onSwipedLeft: () => {
+      handleCloseMenu();
+    },
   });
 
   return (
