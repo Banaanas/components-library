@@ -7,9 +7,10 @@
     <list default="true" id="e05b2b57-101d-4dac-86d2-4913d52b6635" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SideMenu/Burger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SideMenu/Burger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SideMenu/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SideMenu/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SideMenu/SideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SideMenu/SideMenu.js" afterDir="false" />
     </list>
     <disabled>
       <disabled_changelists>
@@ -172,7 +173,9 @@
       <workItem from="1609531564235" duration="1769000" />
       <workItem from="1609569340151" duration="439000" />
       <workItem from="1609611610809" duration="740000" />
-      <workItem from="1609757842498" duration="864000" />
+      <workItem from="1609757842498" duration="1009000" />
+      <workItem from="1609774773275" duration="2471000" />
+      <workItem from="1609837801573" duration="5515000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor">
       <created>1608716138455</created>
@@ -314,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609533324043</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="SideMenu">
+      <created>1609758843535</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1609758843535</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

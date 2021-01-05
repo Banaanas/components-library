@@ -7,13 +7,17 @@ const StyledNav = styled.nav`
   justify-content: space-around;
   width: 100%;
   max-width: 350px;
-  padding: 0.5rem;
+`;
+
+const StyledList = styled.ul`
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0;
+  list-style: none;
 `;
 
 const StyledNavLink = styled(NavLink)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: bolder;
   font-size: 1rem;
@@ -44,19 +48,29 @@ const NavBar = () => {
 
   return (
     <StyledNav>
-      <StyledNavLink exact to="/">
-        HOME
-      </StyledNavLink>
-      <StyledNavLink
-        to="/about"
-        isActive={() =>
-          ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
-        }
-      >
-        ABOUT
-      </StyledNavLink>
-      <StyledNavLink to="/work">WORK</StyledNavLink>
-      <StyledNavLink to="/contact">CONTACT</StyledNavLink>
+      <StyledList>
+        <li>
+          <StyledNavLink exact to="/">
+            HOME
+          </StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink
+            to="/about"
+            isActive={() =>
+              ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
+            }
+          >
+            ABOUT
+          </StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to="/work">WORK</StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to="/contact">CONTACT</StyledNavLink>
+        </li>
+      </StyledList>
     </StyledNav>
   );
 };

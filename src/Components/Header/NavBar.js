@@ -5,14 +5,31 @@ import { usePopper } from "react-popper";
 
 const StyledNav = styled.nav`
   display: none;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 55%;
-  min-width: 35rem;
-  padding: 1rem;
 
   @media (min-width: 710px) {
     display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    min-width: 450px;
+    margin-left: auto;
+  }
+
+  @media (min-width: 850px) {
+    min-width: 550px;
+  }
+`;
+
+const StyledList = styled.ul`
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-content: center;
+    justify-content: center;
   }
 `;
 
@@ -137,23 +154,34 @@ const NavBar = () => {
   return (
     <>
       <StyledNav>
-        <StyledNavLink exact to="/">
-          HOME
-        </StyledNavLink>
-        <StyledNavLink
-          to="/about"
-          isActive={() =>
-            ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
-          }
-          ref={referenceRef}
-          onClick={handleCloseMenu}
-          onMouseEnter={handleOpenMenu}
-          onMouseLeave={handleCloseMenu}
-        >
-          ABOUT
-        </StyledNavLink>
-        <StyledNavLink to="/work">WORK</StyledNavLink>
-        <StyledNavLink to="/contact">CONTACT</StyledNavLink>
+        <StyledList>
+          <li>
+            <StyledNavLink exact to="/">
+              HOME
+            </StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink
+              to="/about"
+              isActive={() =>
+                ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
+              }
+              ref={referenceRef}
+              onClick={handleCloseMenu}
+              onMouseEnter={handleOpenMenu}
+              onMouseLeave={handleCloseMenu}
+            >
+              ABOUT
+            </StyledNavLink>
+          </li>
+
+          <li>
+            <StyledNavLink to="/work">WORK</StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink to="/contact">CONTACT</StyledNavLink>
+          </li>
+        </StyledList>
       </StyledNav>
       <DropdownMenu
         onMouseEnter={handleOpenMenu}

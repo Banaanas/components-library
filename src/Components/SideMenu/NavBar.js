@@ -24,18 +24,14 @@ const StyledMenu = styled.div`
   transition: transform, 300ms ease;
 `;
 
-const StyledNav = styled.nav`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0.5rem;
+const StyledList = styled.ul`
+  list-style: none;
 `;
 
 const StyledNavLink = styled(NavLink)`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 1rem 0;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-weight: bold;
@@ -100,41 +96,55 @@ const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
       /* eslint-disable-next-line react/jsx-props-no-spreading */
       {...handlers}
     >
-      <StyledNav>
-        <StyledNavLink
-          exact
-          to="/"
-          tabIndex={tabIndex}
-          onClick={handleCloseMenu}
-        >
-          <span aria-hidden="true">🐼</span>
-          Home
-        </StyledNavLink>
+      <nav>
+        <StyledList>
+          <li>
+            <StyledNavLink
+              exact
+              to="/"
+              tabIndex={tabIndex}
+              onClick={handleCloseMenu}
+            >
+              <span aria-hidden="true">🐼</span>
+              Home
+            </StyledNavLink>
+          </li>
 
-        <StyledNavLink
-          to="/about"
-          tabIndex={tabIndex}
-          onClick={handleCloseMenu}
-          isActive={() =>
-            ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
-          }
-        >
-          <span aria-hidden="true">🐨</span>
-          About
-        </StyledNavLink>
-        <StyledNavLink to="/work" tabIndex={tabIndex} onClick={handleCloseMenu}>
-          <span aria-hidden="true">🐯</span>
-          Work
-        </StyledNavLink>
-        <StyledNavLink
-          to="/contact"
-          tabIndex={tabIndex}
-          onClick={handleCloseMenu}
-        >
-          <span aria-hidden="true">🐰</span>
-          Contact
-        </StyledNavLink>
-      </StyledNav>
+          <li>
+            <StyledNavLink
+              to="/about"
+              tabIndex={tabIndex}
+              onClick={handleCloseMenu}
+              isActive={() =>
+                ["/about", "/cyrilo", "/vision", "/resume"].includes(pathname)
+              }
+            >
+              <span aria-hidden="true">🐨</span>
+              About
+            </StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink
+              to="/work"
+              tabIndex={tabIndex}
+              onClick={handleCloseMenu}
+            >
+              <span aria-hidden="true">🐯</span>
+              Work
+            </StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink
+              to="/contact"
+              tabIndex={tabIndex}
+              onClick={handleCloseMenu}
+            >
+              <span aria-hidden="true">🐰</span>
+              Contact
+            </StyledNavLink>
+          </li>
+        </StyledList>
+      </nav>
     </StyledMenu>
   );
 };
