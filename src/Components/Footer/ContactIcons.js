@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import { HiOutlineGlobeAlt as PersonalWebsiteIcon } from "react-icons/hi";
-import { VscGithubInverted as GitHubIcon } from "react-icons/vsc";
-import { IoMdMail as MailIcon } from "react-icons/io";
-import { ImLinkedin as LinkedInIcon } from "react-icons/im";
+import {HiOutlineGlobeAlt as PersonalWebsiteIcon} from "react-icons/hi";
+import {VscGithubInverted as GitHubIcon} from "react-icons/vsc";
+import {IoMdMail as MailIcon} from "react-icons/io";
+import {ImLinkedin as LinkedInIcon} from "react-icons/im";
 
 const StyledSocialIconsContainer = styled.div`
   display: flex;

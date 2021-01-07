@@ -1,7 +1,9 @@
+import {useDispatch, useSelector} from "react-redux";
 import styled from "@emotion/styled";
-import { NavLink, useLocation } from "react-router-dom";
-import { useSwipeable } from "react-swipeable";
-import removeMenuEffects from "../../utils/removeMenuEffects";
+import {NavLink, useLocation} from "react-router-dom";
+import {useSwipeable} from "react-swipeable";
+import enablePageScroll from "../../utils/enablePageScroll";
+import {closeSideMenu} from "../../store/slices/sideMenuSlice";
 
 const StyledMenu = styled.div`
   position: fixed;
@@ -59,7 +61,13 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
-const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
+const NavBar = ({ menuID }) => {
+  // SIDE MENU - REDUX STATE
+  const isMenuOpen = useSelector((state) => state.sideMenu.isMenuOpen);
+
+  // USEDISPATCH - REDUX STATE
+  const dispatch = useDispatch();
+
   const isMenuDisplayed = isMenuOpen ? true : false;
   const tabIndex = isMenuDisplayed ? 0 : -1;
 
@@ -74,10 +82,11 @@ const NavBar = ({ isMenuOpen, setMenuOpen, menuID }) => {
 
   // Handle Close Side Menu - FUNCTION
   const handleCloseMenu = () => {
-    setMenuOpen(false);
+    // Close SideMenu - Dispatch - Redux State
+    dispatch(closeSideMenu());
 
-    // Remove Background Blur Effect and enable Scroll again
-    removeMenuEffects();
+    // Enable Scroll Again
+    enablePageScroll();
   };
 
   // React Swipe Event Handler - Close SideMenu when onSwipedLeft

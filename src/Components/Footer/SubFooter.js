@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { FaOm as AumIcon } from "react-icons/fa";
+import {FaOm as AumIcon} from "react-icons/fa";
 
 const StyledAumIcon = styled(AumIcon)`
   margin: 0 0.5rem;

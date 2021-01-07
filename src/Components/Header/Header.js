@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { useTheme } from "@emotion/react";
+import {useState} from "react";
+import {NavLink} from "react-router-dom";
+import {useTheme} from "@emotion/react";
 import styled from "@emotion/styled";
-import { useThrottledFn, useWindowScroll } from "beautiful-react-hooks";
+import {useThrottledFn, useWindowScroll} from "beautiful-react-hooks";
 import NavBar from "./NavBar";
 import SideMenu from "../SideMenu/SideMenu";
 import Shiva from "../../assets/Shiva.svg";

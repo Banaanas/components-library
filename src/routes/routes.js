@@ -1,5 +1,5 @@
-import { Redirect, Route, Switch } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import {Redirect, Route, Switch} from "react-router-dom";
+import {AnimatePresence} from "framer-motion";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import WorkPage from "../pages/WorkPage";

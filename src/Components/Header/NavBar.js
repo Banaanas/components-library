@@ -1,7 +1,7 @@
-import { useRef, useState } from "react";
+import {useRef, useState} from "react";
 import styled from "@emotion/styled";
-import { NavLink, useLocation } from "react-router-dom";
-import { usePopper } from "react-popper";
+import {NavLink, useLocation} from "react-router-dom";
+import {usePopper} from "react-popper";
 
 const StyledNav = styled.nav`
   display: none;

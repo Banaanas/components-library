@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 const StyledPageMain = styled(motion.main)`
   display: flex;
@@ -14,7 +14,7 @@ const StyledPageMain = styled(motion.main)`
   font-weight: bold;
   font-size: 1rem;
   text-align: justify;
-  filter: blur(0);
+  filter: ${({ isMenuOpen }) => (isMenuOpen ? "blur(20px)" : "blur(0)")};
   transition: filter, 300ms ease;
 `;
 

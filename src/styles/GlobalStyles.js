@@ -1,4 +1,4 @@
-import { css, Global, useTheme } from "@emotion/react";
+import {css, Global, useTheme} from "@emotion/react";
 import NormalizeCSS from "./normalize.css";
 
 // Emotion Global Styles - With Materialize
