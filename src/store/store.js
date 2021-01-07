@@ -1,5 +1,4 @@
 import {configureStore} from "@reduxjs/toolkit";
-
 import sideMenuReducer from "./slices/sideMenuSlice";
 
 // REDUX STORE

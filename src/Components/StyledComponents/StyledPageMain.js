@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 
 const StyledPageMain = styled(motion.main)`
   display: flex;

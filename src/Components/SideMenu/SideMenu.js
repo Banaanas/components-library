@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useThrottledFn, useWindowResize } from "beautiful-react-hooks";
+import {useEffect, useRef, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {useThrottledFn, useWindowResize} from "beautiful-react-hooks";
 import styled from "@emotion/styled";
 import FocusLock from "react-focus-lock";
 import useOnClickOutside from "../../custom-hooks/useOnClickOutside";
 import Burger from "./Burger";
 import NavBar from "./NavBar";
 import enablePageScroll from "../../utils/enablePageScroll";
-import { closeSideMenu } from "../../store/slices/sideMenuSlice";
+import {closeSideMenu} from "../../store/slices/sideMenuSlice";
 
 const StyledDiv = styled.div`
   @media (min-width: 710px) {

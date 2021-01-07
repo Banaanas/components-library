@@ -1,7 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import styled from "@emotion/styled";
 import enablePageScroll from "../../utils/enablePageScroll";
-import { toggleSideMenu } from "../../store/slices/sideMenuSlice";
+import {toggleSideMenu} from "../../store/slices/sideMenuSlice";
 
 const StyledSideMenuButton = styled.button`
   display: flex;
