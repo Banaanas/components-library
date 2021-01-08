@@ -1,9 +1,9 @@
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "@emotion/styled";
-import {NavLink, useLocation} from "react-router-dom";
-import {useSwipeable} from "react-swipeable";
+import { NavLink, useLocation } from "react-router-dom";
+import { useSwipeable } from "react-swipeable";
 import enablePageScroll from "../../utils/enablePageScroll";
-import {closeSideMenu} from "../../store/slices/sideMenuSlice";
+import { closeSideMenu } from "../../store/slices/sideMenuSlice";
 
 const StyledMenu = styled.div`
   position: fixed;
